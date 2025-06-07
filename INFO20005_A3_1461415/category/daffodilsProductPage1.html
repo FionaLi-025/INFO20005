@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daffodils | Garden Express</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/product1.css" />
+</head>
+
+<body class="product-page">
+    <header class="site-header">
+        <div class="left-icons">
+            <a href="../index.html#open-menu"><i class="fas fa-bars"></i></a>
+        </div>
+
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../assets/images/Logo.jpg" alt="Logo" class="logo-img" />
+            </a>
+        </div>
+
+        <div class="right-icons">
+            <a href="../cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <a href="../account.html"><i class="fas fa-user"></i></a>
+        </div>
+  </header>
+
+  <main class="product-detail-container">
+
+    <div class="product-detail-grid">
+        <div class="product-image">
+            <img src="../assets/images/daffodilProduct1.jpg" alt="DaffodilProduct1">
+            <div class="sale-badge">Sale!</div>
+        </div>
+
+        <section class="product-info">
+            <h1>Daffodil Mixed</h1>
+            <p>Pack of 25</p>
+            <p><del>$36</del> $12.60</p>
+
+            <div class="quantity-selector">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+            </div>
+
+            <button class="add-to-cart">Add to Cart - $12.60</button>
+
+            <div class="accordion-section">
+                <details>
+                    <summary>Description</summary>
+                    <p>These daffodils are known for their cheerful yellow blooms.</p>
+                </details>
+                <details>
+                    <summary>Details</summary>
+                    <p>Height: 30cm, Bloom: Spring</p>
+                </details>
+                <details>
+                    <summary>Money-back Guarantee</summary>
+                    <p>Full refund within 30 days of delivery.</p>
+                </details>
+                <details>
+                    <summary>Delivery Details</summary>
+                    <p>Orders dispatched from April.</p>
+                </details>
+            </div>
+        </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 UniMelb INFO20005 Assignment3. All rights reserved.</p>
+  </footer>
+</body>
+
+
+<script>
+  const toggleBtn = document.querySelector("#menu-toggle"); 
+  const sidebar = document.querySelector("#sidebar");
+  const closeBtn = document.querySelector("#close-btn");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.add("show");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("show");
+  });
+
+  const categoryHeaders = document.querySelectorAll('.category-header');
+
+  categoryHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const menuItem = header.parentElement;
+      menuItem.classList.toggle('active');
+    });
+  });
+
+  window.addEventListener("load", () => {
+  if (window.location.hash === "#open-menu") {
+    const sidebar = document.querySelector("#sidebar");
+    sidebar.classList.add("show");
+  }
+});
+
+
+</script>
+
+</html>

@@ -1,0 +1,159 @@
+header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+}
+
+.site-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.right-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.right-icons a i,
+.left-icons a i {
+  color: #70c154;
+  font-size: 2rem;
+}
+
+.right-icons a i:hover,
+.left-icons a i:hover {
+  color: #4d993e;
+  cursor: pointer;
+}
+
+.logo-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.product-detail-grid {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem;
+  align-items: flex-start;
+}
+
+.product-image {
+  position: relative;
+  width: 45%;
+  margin-left: 5rem;
+}
+
+.product-image img {
+  width: 100%;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #c24706;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-info .price del {
+  color: gray;
+  margin-right: 1rem;
+}
+
+.quantity-selector {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.quantity-selector button {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+.dispatch-info {
+  font-size: 0.9rem;
+  color: #7dbb7d;
+}
+
+
+
+.product-info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.add-to-cart {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: #a8df8e;
+  border: none;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.accordion-area {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+details {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+summary::marker {
+  content: '';
+}
+
+summary::after {
+  content: '▾';
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+
