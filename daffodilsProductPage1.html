@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daffodils | Garden Express</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/product1.css" />
+</head>
+
+<body class="product-page">
+    <header class="site-header">
+        <div class="left-icons">
+            <a href="../index.html#open-menu"><i class="fas fa-bars"></i></a>
+        </div>
+
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../assets/images/Logo.jpg" alt="Logo" class="logo-img" />
+            </a>
+        </div>
+
+        <div class="right-icons">
+            <a href="../cart/cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <a href="../account.html"><i class="fas fa-user"></i></a>
+        </div>
+  </header>
+
+  <main class="product-detail-container">
+
+    <div class="product-detail-grid">
+        <div class="product-image">
+            <img src="../assets/images/daffodilProduct1.jpg" alt="DaffodilProduct1">
+            <div class="sale-badge">Sale!</div>
+        </div>
+
+        <section class="product-info">
+            <h1>Daffodil Mixed</h1>
+            <p>Pack of 5</p>
+            <p><del>$36</del> $12.60</p>
+
+            <div class="quantity-selector">
+                <button>-</button>
+                    <input type="text" value="1">
+                <button>+</button>
+            </div>
+
+            <button id="add-to-cart" class="add-to-cart">Add to Cart - $12.60</button>
+            <div id="cart-popup">
+                <strong>Cart</strong>
+                <div class="cart-item">
+                    <img src="../assets/images/daffodilProduct1.jpg" alt="daffodilProduct1" />
+
+                    <div class="cart-info">
+                        <h1>Daffodil Mixed</h1>
+                        <p class="cart-price">$12.60</p>
+                        <div class="quantity-box">
+                        <button>-</button>
+                        <input type="number" value="1" />
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="accordion-section">
+                <details>
+                    <summary>Description</summary>
+                    <p>Daffodil Holland Chase (Narcissus tazetta) is a beautiful double featuring many layers of golden petals highlighted with orange centres.
+                        A stunning variation to the traditional yellow symbols of Spring, Double Daffodils add a delightful charm to the garden with their double and split trumpets or double layers of petals, 
+                        or sometimes both and often in contrasting colours.Like all Daffodils, they are ideal for pots, tubs and the garden. </p>
+                    <p>Leave them in the ground year after year and the bulbs will multiply and create large clumps of colour. Excellent as a cut flower to bring Spring indoors, 
+                        Daffodils look great when planted under trees. Ideal planted in clumps, either on their own as a feature, in a mix with other Spring flowering bulbs, or with a border of Muscari or Spring stars. 
+                        Daffodils are better suited to the cooler climates, and are best treated as an annual in areas that do not get a cold Winter or have a short hot Spring.</p></p>
+                </details>
+                <details>
+                    <summary>Details</summary>
+                    <p>· Frost tolerant once established</p>
+                    <p>· Suitable for areas with full sun</p>
+                    <p>· Suitable for areas with part shade</p>
+                    <p>· Ideal in pots or containers</p>
+                    <p>· Suitable to cut for vases</p>
+                    <p>· Plant 12cm apart</p>
+                    <p>· Grows to 30-40cm high</p>
+                    <p>· Winter-Spring</p>
+
+                </details>
+                <details>
+                    <summary>Money-back Guarantee</summary>
+                    <p>Full refund within 30 days of delivery.</p>
+                </details>
+                <details>
+                    <summary>Delivery Details</summary>
+                    <p>Orders dispatched from June.</p>
+                </details>
+            </div>
+        </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 UniMelb INFO20005 Assignment3. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("add-to-cart").addEventListener("click", () => {
+        const btn = document.getElementById("add-to-cart");
+        const cartPopup = document.getElementById("cart-popup");
+
+        btn.textContent = "Added!";
+        btn.style.backgroundColor = "#b2e59e";
+
+        cartPopup.classList.remove("hidden");
+        cartPopup.classList.add("show");
+
+        const product = {
+            title: "Daffodil Mixed",
+            price: 12.6,
+            img: "../assets/images/daffodilProduct1.jpg"
+        };
+        sessionStorage.setItem("addedProduct", JSON.stringify(product));
+
+        setTimeout(() => {
+            btn.textContent = "Add to Cart – $12.60";
+            btn.style.backgroundColor = "#70c154";
+            cartPopup.classList.remove("show");
+            cartPopup.classList.add("hidden");
+        }, 3000);
+    });
+
+
+    const toggleBtn = document.querySelector("#menu-toggle"); 
+    const sidebar = document.querySelector("#sidebar");
+    const closeBtn = document.querySelector("#close-btn");
+
+    toggleBtn.addEventListener("click", () => {
+        sidebar.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("show");
+    });
+
+    const categoryHeaders = document.querySelectorAll('.category-header');
+
+    categoryHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+        const menuItem = header.parentElement;
+        menuItem.classList.toggle('active');
+        });
+    });
+
+    window.addEventListener("load", () => {
+        if (window.location.hash === "#open-menu") {
+            const sidebar = document.querySelector("#sidebar");
+            sidebar.classList.add("show");
+        }
+        });
+
+    
+    </script>
+</body>
+</html>

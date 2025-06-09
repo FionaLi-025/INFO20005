@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daffodils | Garden Express</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/category.css" />
+</head>
+
+<body class="category-page">
+    <header class="left-icons">
+        
+        <div class="sidebar">
+            <a href="../index.html#open-menu">
+                <i class="fas fa-bars" id="menu-toggle"></i>
+            </a>
+        </div>
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../assets/images/Logo.jpg" alt="Logo" class="logo-img" />
+            </a>
+        </div>
+    
+        <div class="right-icons">
+            <a href="#" class="status-button">Check Order Status</a>
+            <a href="../cart/cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <a href="account.html"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <section class="category-title">
+        <h1>Daffodils</h1>
+    </section>
+
+    <section class="category-content">
+        <div class="category-intro">
+            <img src="../assets/images/Daffodil_Hero.jpg" alt="Daffodils">
+            <div class="category-description">
+            <p>
+                Bring a burst of sunshine to your garden with daffodil bulbs from Garden Express Australia.
+                Known for their iconic trumpet-shaped blooms and cheerful colours, they are a quintessential symbol of spring.
+            </p>
+            <p>
+                They thrive in full sun to partial shade and prefer well-drained soil. 
+                Their natural resistance to pests and minimal care requirements make them ideal for gardeners of all skill levels. 
+                From classic yellow varieties to vibrant multicoloured blooms, daffodils provide options for every taste and garden style.
+            </p>
+
+            <p>
+                Plant the bulbs in autumn and enjoy their radiant blooms as one of the first signs of spring.
+            </p>
+            </div>
+        </div>
+
+        <div class="product-grid">
+            <article class="product-card">
+                <a href="daffodilsProductPage1.html"><img src="../assets/images/daffodilProduct1.jpg" alt="Daffodil1" /></a>
+                    <h3>Daffodil Hoop Petticoat Yellow</h3>
+                    <p>Pack of 5</p>
+                    <p class="price"><del>$36.00</del> $12.60</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <a href="daffodilsProductPage2.html"><img src="../assets/images/DaffodilProduct2.jpg" alt="Daffodil2" /></a>
+                <h3>Daffodil Mini Collection</h3>
+                <p>Pack of 14</p>
+                <p class="price"><del>$33.40</del> $25.00</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <a href="daffodilsProductPage3.html"><img src="../assets/images/DaffodilProduct3.jpg" alt="Daffodile3" /></a>
+                <h3>Daffodil Tamar Fire</h3>
+                <p>Pack of 3</p>
+                <p class="price"><del>$9.70</del> $5</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <a href="#"><img src="../assets/images/DaffodilProduct4.jpg" alt="Daffodil4" /></a>
+                <h3>Daffodil Dick Wilden</h3>
+                <p>Pack of 4</p>
+                <p class="price">$8.90</p>
+                <button>Add to Cart</button>
+            </article>  
+            
+            <article class="product-card">
+                <a href="#"></a><img src="../assets/images/DaffodilProduct5.jpg" alt="Daffodil5" />
+                <h3>Daffodil Obdam</h3>
+                <p>Pack of 3</p>
+                <p class="price">$10.80</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <a href="#"></a><img src="../assets/images/DaffodilProduct6.jpg" alt="Daffodil6" />
+                <h3>Daffodil Gay Kybo</h3>
+                <p>Pack of 3</p>
+                <p class="price">$12.00</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <a href="#"></a><img src="../assets/images/DaffodilProduct7.jpg" alt="Daffodil7" />
+                <h3>Daffodil Candy Princess</h3>
+                <p>Pack of 3</p>
+                <p class="price">$10.80</p>
+                <button>Add to Cart</button>
+            </article>
+
+            <article class="product-card">
+                <a href="#"></a><img src="../assets/images/DaffodilProduct8.jpg" alt="Daffodil8" />
+                <h3>Daffodil Madison</h3>
+                <p>Pack of 3</p>
+                <p class="price">$12</p>
+                <button>Add to Cart</button>
+            </article>
+        </div>
+    </section>
+  
+    <footer>
+    <p>&copy; 2025 UniMelb INFO20005 Assignment3. All rights reserved.</p>
+  </footer>
+</body>
+
+
+<script>
+  const toggleBtn = document.querySelector("#menu-toggle");
+  const sidebar = document.querySelector("#sidebar");
+  const closeBtn = document.querySelector("#close-btn");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.add("show");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("show");
+  });
+
+  const categoryHeaders = document.querySelectorAll('.category-header');
+
+  categoryHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const menuItem = header.parentElement;
+      menuItem.classList.toggle('active');
+    });
+  });
+
+  window.addEventListener("load", () => {
+  if (window.location.hash === "#open-menu") {
+    const sidebar = document.querySelector("#sidebar");
+    sidebar.classList.add("show");
+  }
+});
+
+
+</script>
+
+
+</html>
