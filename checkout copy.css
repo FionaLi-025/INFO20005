@@ -1,0 +1,93 @@
+header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.right-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.right-icons a i,
+.left-icons a i {
+  color: #70c154;
+  font-size: 2rem;
+}
+
+.right-icons a i:hover,
+.left-icons a i:hover {
+  color: #4d993e;
+  cursor: pointer;
+}
+
+.logo-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3rem;
+  max-width: 300px;
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+.checkout-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.customer-info,
+.summary-section {
+  flex: 1 1 300px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.summary-section p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.1rem 0;
+}
+
+.payment-options label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.summary-section .submit-btn {
+  background-color: #f27059;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #d85740;
+}
