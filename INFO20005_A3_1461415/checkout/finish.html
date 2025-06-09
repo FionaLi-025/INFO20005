@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finish | Garden Express</title>
+</head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .logo {
+      max-width: 250px;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: #7bc043;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    #done-btn {
+      background-color: #7bc043;
+      border: none;
+      padding: 0.8rem 2rem;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #done-btn:hover {
+      background-color: #66a738;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="../assets/images/Logo.jpg" alt="GardenExpress Logo" class="logo" />
+
+  <h1>Payment Successful!</h1>
+  <p>Thank you! Your payment is complete!</p>
+
+  <button id="done-btn">Done</button>
+
+  <script>
+    document.getElementById("done-btn").addEventListener("click", () => {
+      sessionStorage.removeItem("checkoutItems");
+      sessionStorage.removeItem("addedProduct");
+      sessionStorage.removeItem("cartCount");
+      window.location.href = "../index.html"; 
+    });
+  </script>
+
+</body>
+</html>

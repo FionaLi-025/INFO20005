@@ -26,7 +26,7 @@
     
     <div class="right-icons">
       <a href="#" class="status-button">Check Order Status</a>
-      <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+      <a href="cart/cart.html"><i class="fas fa-shopping-bag"></i></a>
       <a href="account.html"><i class="fas fa-user"></i></a> 
     </div>
   </header>
@@ -56,7 +56,7 @@
 
     <section class="product-grid">
       <article class="product-card">
-        <a href="#"></a><img src="assets/images/featuredPhoto1.jpg" alt="featuredPhoto1" />
+        <a href="category/featureProduct1.html"><img src="assets/images/featuredPhoto1.jpg" alt="featuredPhoto1" /></a>
         <h3>Bearded Iris Tall Mixed</h3>
         <p>Pack of 3</p>
         <p>$25.00</p>
@@ -64,7 +64,7 @@
       </article>
 
       <article class="product-card">
-        <a href="#"></a><img src="assets/images/featuredPhoto2.jpg" alt="featuredPhoto2" />
+        <a href="category/featuredProduct2.html"><img src="assets/images/featuredPhoto2.jpg" alt="featuredPhoto2" /></a>
         <h3>Fuchsia Bella Mariska</h3>
         <p>68mm Pot</p>
         <p>$6.90</p>
@@ -172,23 +172,12 @@
   </footer>
 
 
-</body>
-
-<script>
-  let currentIndex = 0;
-  const images = document.querySelectorAll(".slide-track img");
-
-  setInterval(() => {
-    images[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add("active");
-  }, 3000);
-</script>
 
 <script>
   const toggleBtn = document.querySelector("#menu-toggle");
   const sidebar = document.querySelector("#sidebar");
   const closeBtn = document.querySelector("#close-btn");
+  const categoryHeaders = document.querySelectorAll('.category-header');
 
   toggleBtn.addEventListener("click", () => {
     sidebar.classList.add("show");
@@ -197,8 +186,6 @@
   closeBtn.addEventListener("click", () => {
     sidebar.classList.remove("show");
   });
-
-  const categoryHeaders = document.querySelectorAll('.category-header');
 
   categoryHeaders.forEach(header => {
     header.addEventListener('click', () => {
@@ -214,8 +201,11 @@
     }
   });
 
+  const images = document.querySelectorAll(".slide-track img");
+
 
 </script>
 
+</body>
 </html>
 

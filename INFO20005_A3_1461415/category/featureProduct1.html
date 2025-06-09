@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daffodils | Garden Express</title>
+  <title>Flower | Garden Express</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -30,16 +30,16 @@
 
   <main class="product-detail-container">
 
-    <div class="product-detail-grid">
+    <section class="product-detail-grid">
         <div class="product-image">
-            <img src="../assets/images/daffodilProduct1.jpg" alt="DaffodilProduct1">
+            <img src="../assets/images/featuredPhoto1.jpg" alt="featureProduct1">
             <div class="sale-badge">Sale!</div>
         </div>
 
         <section class="product-info">
-            <h1>Daffodil Mixed</h1>
-            <p>Pack of 5</p>
-            <p><del>$36</del> $12.60</p>
+            <h1>Bearded Iris Tall Mixed</h1>
+            <p>Pack of 53</p>
+            <p> $25.00</p>
 
             <div class="quantity-selector">
                 <button>-</button>
@@ -47,15 +47,15 @@
                 <button>+</button>
             </div>
 
-            <button id="add-to-cart" class="add-to-cart">Add to Cart - $12.60</button>
+            <button id="add-to-cart" class="add-to-cart">Add to Cart - $25.00</button>
             <div id="cart-popup">
                 <strong>Cart</strong>
                 <div class="cart-item">
-                    <img src="../assets/images/daffodilProduct1.jpg" alt="daffodilProduct1" />
+                    <img src="../assets/images/featuredPhoto1.jpg" alt="daffodilProduct1" />
 
                     <div class="cart-info">
-                        <h1>Daffodil Mixed</h1>
-                        <p class="cart-price">$12.60</p>
+                        <h1>Bearded Iris Tall Mixed</h1>
+                        <p class="cart-price">$25.00</p>
                         <div class="quantity-box">
                         <button>-</button>
                         <input type="number" value="1" />
@@ -69,12 +69,12 @@
             <div class="accordion-section">
                 <details>
                     <summary>Description</summary>
-                    <p>Daffodil Holland Chase (Narcissus tazetta) is a beautiful double featuring many layers of golden petals highlighted with orange centres.
-                        A stunning variation to the traditional yellow symbols of Spring, Double Daffodils add a delightful charm to the garden with their double and split trumpets or double layers of petals, 
-                        or sometimes both and often in contrasting colours.Like all Daffodils, they are ideal for pots, tubs and the garden. </p>
-                    <p>Leave them in the ground year after year and the bulbs will multiply and create large clumps of colour. Excellent as a cut flower to bring Spring indoors, 
-                        Daffodils look great when planted under trees. Ideal planted in clumps, either on their own as a feature, in a mix with other Spring flowering bulbs, or with a border of Muscari or Spring stars. 
-                        Daffodils are better suited to the cooler climates, and are best treated as an annual in areas that do not get a cold Winter or have a short hot Spring.</p></p>
+                    <p>Bearded irises are stunning flowering plants characterized by their large, showy blooms and distinctive fuzzy “beards” on the falls (lower petals). 
+                        They come in a wide array of colors, including purple, blue, yellow, white, and pink, and are popular in gardens for their beauty and easy care. </p>
+                    <p>Bearded Iris are ideal for providing tall accents in the garden bed and are the epitome of garden elegance.
+                        With their luxurious blooms and charming bearded petals, they’re the must-have statement piece for any Summer garden. 
+                        Discover the beauty of bearded irises and elevate your outdoor space with nature’s own masterpiece. 
+                        They are extremely hardy and are drought and frost resistant once established.</p>
                 </details>
                 <details>
                     <summary>Details</summary>
@@ -116,9 +116,9 @@
         cartPopup.classList.add("show");
 
         const product = {
-            title: "Daffodil Mixed",
-            price: 12.6,
-            img: "../assets/images/daffodilProduct1.jpg"
+            title: "Bearded Iris Tall Mixed",
+            price: 25,
+            img: "../assets/images/featuredPhoto1.jpg"
         };
         sessionStorage.setItem("addedProduct", JSON.stringify(product));
 

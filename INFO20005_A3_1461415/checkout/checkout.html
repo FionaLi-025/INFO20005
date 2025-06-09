@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+        <a href="../index.html">
+            <img src="../assets/images/Logo.jpg" alt="Logo" class="logo-img" />
+        </a>
+    </div>
+  </header>
+
+  <main class="checkout-container">
+    <section class="customer-info">
+      <h2>Customer Information</h2>
+      <form id="checkout-form">
+        <input type="text" placeholder="First name*" required />
+        <input type="text" placeholder="Last name*" required />
+        <input type="email" placeholder="Email*" required />
+        <input type="tel" placeholder="Mobile Number*" required />
+        <input type="text" placeholder="Address*" required />
+        <input type="text" placeholder="Postcode*" required />
+        <input type="text" placeholder="State*" required />
+      </form>
+    </section>
+
+    <section class="summary-section">
+      <h2>Summary</h2>
+      <div id="summary-items"></div>
+        <p>Subtotal: <span id="subtotal">$0.00</span></p>
+        <p>Shipping: <span>$7.50</span></p>
+        <p><strong>Total: <span id="total">$0.00</span></strong></p>
+
+      <h2>Payment</h2>
+      <div class="payment-options">
+        <label><input type="radio" name="payment" checked /> Credit Card</label>
+        <label><input type="radio" name="payment" /> Afterpay</label>
+        <label><input type="radio" name="payment" /> PayPal</label>
+      </div>
+
+      
+    <a href="finish.html">
+        <button class="submit-btn">Place Order</button>
+    </a>
+    </section>
+  </main>
+</body>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+  const cart = JSON.parse(sessionStorage.getItem("checkoutCart") || "[]");
+  const container = document.getElementById("summary-items");
+  const subtotalEl = document.getElementById("subtotal");
+  const totalEl = document.getElementById("total");
+  const shipping = 7.5;
+  let subtotal = 0;
+
+  cart.forEach(item => {
+    const p = document.createElement("p");
+    p.innerHTML = `<strong>${item.quantity}</strong> ${item.title} <span>$${(item.price * item.quantity).toFixed(2)}</span>`;
+    container.appendChild(p);
+    subtotal += item.price * item.quantity;
+  });
+
+  subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+  totalEl.textContent = `$${(subtotal + shipping).toFixed(2)}`;
+});
+
+</script>
+</html>

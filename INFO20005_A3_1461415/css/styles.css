@@ -129,7 +129,7 @@ header {
   color: #70c154;
   font-size: 2rem;
   text-align: front;
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-left: 2rem;
 }
 
@@ -163,10 +163,10 @@ header {
   border-radius: 8px;
   height: 100%; 
   box-sizing: border-box;
-
 }
 
 .product-card h3 {
+  font-size: 1rem;
   min-height: 1em;      
   margin-bottom: 0.5rem;
 }
@@ -175,7 +175,6 @@ header {
   margin: 0.2rem 0;
   min-height: 1.2rem;  
 }
-
 
 .product-card img {
   width: 100%;
@@ -267,6 +266,7 @@ a {
 .arrow {
   font-size: 1.2rem;
   line-height: 1;
+  margin-left: 1rem;
 }
 
 .menu-item {
@@ -292,15 +292,18 @@ a {
 .submenu {
   display: none;
   background-color: #c7f09b;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-top: 0.5rem;
   list-style: none;
   column-count: 4;
   column-gap: 2rem;
   width: 100%;
   box-sizing: border-box;
   position: relative; 
+  width: 1100px;    
+  max-width: 1100px;    
+  margin: 0 auto;       
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .submenu a {
@@ -321,15 +324,188 @@ footer{
   margin-top: 10rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0.5rem 1rem;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
+  .logo-area {
+    position: static;
+    transform: none;
+    max-width: 150px;
   }
+
+  .right-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .right-icons a i,
+  .left-icons a i {
+    color: #70c154;
+    font-size: 1rem;
+    margin-right: -100rem;
+  }
+
+  .logo-img {
+    max-width: 120px;
+  }
+
+  .status-button {
+      font-size: 0.3rem;
+      padding: 0.3rem 0.6rem;
+    }
+  
+  .hero-banner {
+    width: 360px;
+    height:130px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .slide-track {
+    width: 100%;
+    height: auto;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    background-color: transparent;     
+  }
+
+
+  .slide-track img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;     
+    object-fit: contain;   
+    display: block;
+  }
+
+  .promo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .promo-grid img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .product-grid .product-card {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .hero h2 {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #70c154;
+  font-size: 1rem;
+  text-align: front;
+  margin-top: 2rem;
+  margin-left: 1rem;
 }
+
+  body {
+    padding: 1rem;
+  }
+
+  header,
+  .nav-icons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category-header span:last-child {
+  font-size: 0.5rem;
+  color: #000;
+}
+
+#close-btn {
+  font-size: 1rem;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: -10rem;
+}
+
+.arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.menu-list li {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submenu {
+  display: none;
+  background-color: #c7f09b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  list-style: none;
+  column-count: 1;
+  width: 90%;
+  box-sizing: border-box;
+  position: relative; 
+}
+
+.submenu a {
+  text-decoration: none;   
+  color: black;
+  gap: 2rem;            
+  font-weight: 600;
+  font-size: 0.5rem;       
+}
+
+.submenu a:hover {
+  color: darkgreen;       
+}
+
+.menu-item.active .submenu {
+  display: block;
+}
+
+}
+
+

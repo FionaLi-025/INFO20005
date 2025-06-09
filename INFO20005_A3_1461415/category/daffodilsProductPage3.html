@@ -23,7 +23,7 @@
         </div>
 
         <div class="right-icons">
-            <a href="../cart/cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <a href="../cart.html"><i class="fas fa-shopping-bag"></i></a>
             <a href="../account.html"><i class="fas fa-user"></i></a>
         </div>
   </header>
@@ -32,14 +32,14 @@
 
     <div class="product-detail-grid">
         <div class="product-image">
-            <img src="../assets/images/daffodilProduct1.jpg" alt="DaffodilProduct1">
+            <img src="../assets/images/daffodilProduct3.jpg" alt="DaffodilProduct3">
             <div class="sale-badge">Sale!</div>
         </div>
 
         <section class="product-info">
-            <h1>Daffodil Mixed</h1>
-            <p>Pack of 5</p>
-            <p><del>$36</del> $12.60</p>
+            <h1>Daffodil Tamar Fire</h1>
+            <p>Pack of 3</p>
+            <p><del>$9.70</del> $5.00</p>
 
             <div class="quantity-selector">
                 <button>-</button>
@@ -47,15 +47,15 @@
                 <button>+</button>
             </div>
 
-            <button id="add-to-cart" class="add-to-cart">Add to Cart - $12.60</button>
+            <button id="add-to-cart" class="add-to-cart">Add to Cart - $5.00</button>
             <div id="cart-popup">
                 <strong>Cart</strong>
                 <div class="cart-item">
-                    <img src="../assets/images/daffodilProduct1.jpg" alt="daffodilProduct1" />
+                    <img src="../assets/images/DaffodilProduct3.jpg" alt="daffodilProduct3" />
 
                     <div class="cart-info">
-                        <h1>Daffodil Mixed</h1>
-                        <p class="cart-price">$12.60</p>
+                        <h1>Daffodil Tamar Fire</h1>
+                        <p class="cart-price">$5.00</p>
                         <div class="quantity-box">
                         <button>-</button>
                         <input type="number" value="1" />
@@ -69,12 +69,11 @@
             <div class="accordion-section">
                 <details>
                     <summary>Description</summary>
-                    <p>Daffodil Holland Chase (Narcissus tazetta) is a beautiful double featuring many layers of golden petals highlighted with orange centres.
-                        A stunning variation to the traditional yellow symbols of Spring, Double Daffodils add a delightful charm to the garden with their double and split trumpets or double layers of petals, 
-                        or sometimes both and often in contrasting colours.Like all Daffodils, they are ideal for pots, tubs and the garden. </p>
-                    <p>Leave them in the ground year after year and the bulbs will multiply and create large clumps of colour. Excellent as a cut flower to bring Spring indoors, 
-                        Daffodils look great when planted under trees. Ideal planted in clumps, either on their own as a feature, in a mix with other Spring flowering bulbs, or with a border of Muscari or Spring stars. 
-                        Daffodils are better suited to the cooler climates, and are best treated as an annual in areas that do not get a cold Winter or have a short hot Spring.</p></p>
+                    <p>Daffodil Tete a Tete (Narcissus tazetta) has golden yellow miniature blooms that look just like a scaled down version of a larger Daffodil. </p>
+                    <p>Like all Daffodils, they are ideal for pots, tubs and the garden. Leave in the ground year after year and the bulbs will multiply and create large clumps of colour. 
+                        Excellent as a cut flower to bring Spring indoors, Daffodils look great when planted under trees. Ideal planted in clumps, either on their own as a feature, 
+                        in a mix with other Spring flowering bulbs, or with a border of muscari or spring stars. Better suited to the cooler climates; 
+                        best treated as an annual in areas that do not get a cold Winter or have a short hot Spring.</p>
                 </details>
                 <details>
                     <summary>Details</summary>
@@ -94,7 +93,7 @@
                 </details>
                 <details>
                     <summary>Delivery Details</summary>
-                    <p>Orders dispatched from June.</p>
+                    <p>Orders dispatched from April.</p>
                 </details>
             </div>
         </section>
@@ -104,7 +103,7 @@
     <p>&copy; 2025 UniMelb INFO20005 Assignment3. All rights reserved.</p>
   </footer>
 
-  <script>
+   <script>
     document.getElementById("add-to-cart").addEventListener("click", () => {
         const btn = document.getElementById("add-to-cart");
         const cartPopup = document.getElementById("cart-popup");
@@ -116,9 +115,9 @@
         cartPopup.classList.add("show");
 
         const product = {
-            title: "Daffodil Mixed",
-            price: 12.6,
-            img: "../assets/images/daffodilProduct1.jpg"
+            title: "Daffodil Tamar Fire",
+            price: 5.00,
+            img: "../assets/images/DaffodilProduct3.jpg"
         };
         sessionStorage.setItem("addedProduct", JSON.stringify(product));
 

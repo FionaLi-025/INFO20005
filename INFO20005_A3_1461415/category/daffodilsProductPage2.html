@@ -32,14 +32,14 @@
 
     <div class="product-detail-grid">
         <div class="product-image">
-            <img src="../assets/images/daffodilProduct1.jpg" alt="DaffodilProduct1">
+            <img src="../assets/images/daffodilProduct2.jpg" alt="DaffodilProduct2">
             <div class="sale-badge">Sale!</div>
         </div>
 
         <section class="product-info">
-            <h1>Daffodil Mixed</h1>
-            <p>Pack of 5</p>
-            <p><del>$36</del> $12.60</p>
+            <h1>Daffodil Mini Collection</h1>
+            <p>Pack of 25</p>
+            <p><del>$33.40</del> $25.00</p>
 
             <div class="quantity-selector">
                 <button>-</button>
@@ -47,15 +47,15 @@
                 <button>+</button>
             </div>
 
-            <button id="add-to-cart" class="add-to-cart">Add to Cart - $12.60</button>
+            <button id="add-to-cart" class="add-to-cart">Add to Cart - $25.00</button>
             <div id="cart-popup">
                 <strong>Cart</strong>
                 <div class="cart-item">
-                    <img src="../assets/images/daffodilProduct1.jpg" alt="daffodilProduct1" />
+                    <img src="../assets/images/DaffodilProduct2.jpg" alt="daffodilProduct2" />
 
                     <div class="cart-info">
-                        <h1>Daffodil Mixed</h1>
-                        <p class="cart-price">$12.60</p>
+                        <h1>Daffodil Mini Collection</h1>
+                        <p class="cart-price">$25.00</p>
                         <div class="quantity-box">
                         <button>-</button>
                         <input type="number" value="1" />
@@ -69,12 +69,14 @@
             <div class="accordion-section">
                 <details>
                     <summary>Description</summary>
-                    <p>Daffodil Holland Chase (Narcissus tazetta) is a beautiful double featuring many layers of golden petals highlighted with orange centres.
-                        A stunning variation to the traditional yellow symbols of Spring, Double Daffodils add a delightful charm to the garden with their double and split trumpets or double layers of petals, 
-                        or sometimes both and often in contrasting colours.Like all Daffodils, they are ideal for pots, tubs and the garden. </p>
-                    <p>Leave them in the ground year after year and the bulbs will multiply and create large clumps of colour. Excellent as a cut flower to bring Spring indoors, 
-                        Daffodils look great when planted under trees. Ideal planted in clumps, either on their own as a feature, in a mix with other Spring flowering bulbs, or with a border of Muscari or Spring stars. 
-                        Daffodils are better suited to the cooler climates, and are best treated as an annual in areas that do not get a cold Winter or have a short hot Spring.</p></p>
+                    <p>Daffodil Neon (Narcissus tazetta) certainly has the WOW! factor. 
+                        True gold petals and cup and as the flower ages white tips appear on the cup and at the base of the petals, 
+                        giving this captivating larger flowering miniature Daffodil a glowing appearance. </p>
+                    <p>Like all Daffodils, they are ideal for pots, tubs and the garden. 
+                        Leave in the ground year after year and the bulbs will multiply and create large clumps of colour. 
+                        Excellent as a cut flower to bring Spring indoors, Daffodils look great when planted under trees. 
+                        Ideal planted in clumps, either on their own as a feature, in a mix with other Spring flowering bulbs, or with a border of muscari or spring stars. 
+                        Better suited to the cooler climates; best treated as an annual in areas that do not get a cold Winter or have a short hot Spring.</p>
                 </details>
                 <details>
                     <summary>Details</summary>
@@ -116,14 +118,14 @@
         cartPopup.classList.add("show");
 
         const product = {
-            title: "Daffodil Mixed",
-            price: 12.6,
-            img: "../assets/images/daffodilProduct1.jpg"
+            title: "Daffodil Mini Collection",
+            price: 25,
+            img: "../assets/images/DaffodilProduct2.jpg"
         };
         sessionStorage.setItem("addedProduct", JSON.stringify(product));
 
         setTimeout(() => {
-            btn.textContent = "Add to Cart – $12.60";
+            btn.textContent = "Add to Cart – $25.00";
             btn.style.backgroundColor = "#70c154";
             cartPopup.classList.remove("show");
             cartPopup.classList.add("hidden");
@@ -163,3 +165,4 @@
     </script>
 </body>
 </html>
+
